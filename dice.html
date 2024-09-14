@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dice Roll</title>
+	<style>
+        body{
+            background-color: darkgrey;
+        }
+		.dice {
+            margin-left: 45%;
+            margin-top: 20%;
+			display: inline-block;
+			width: 100px;
+			height: 100px;
+			background-color: rgb(0, 0, 0);
+			border: 5px solid rgb(255, 0, 0);
+            color: aliceblue;
+			text-align: center;
+			font-size: 72px;
+			line-height: 100px;
+			cursor: pointer;
+		}
+        .box{
+            margin-left: 38%;
+            margin-bottom: 20%;
+            background-color: burlywood;
+            color: black;
+            font-size: 32px;
+        }
+	</style>
+</head>
+<body>
+    <span class="box">click the box to roll it</span>
+	<div class="dice" id="dice"></div>
+	<script>
+		var dice = document.getElementById("dice");
+		dice.addEventListener("click", function() {
+			var roll = Math.floor(Math.random() * 6) + 1;
+			dice.innerHTML = roll;
+		});
+	</script>
+</body>
+</html>
